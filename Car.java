@@ -1,13 +1,19 @@
 class Car extends Vehicle {
-  // インスタンスフィールドfuelを定義してください
   private int fuel = 50;
 
-  // fuelフィールドのゲッターを定義してください
+  Car(String name, String color) {
+    super(name, color);
+  }
+
   public int getFuel() {
     return this.fuel;
   }
 
-  // インスタンスメソッドchargeを定義してください
+  public void printData() {
+    super.printData();
+    System.out.println("ガソリン量：" + this.fuel + "L");
+  }
+
   public void charge(int litre) {
     System.out.println(litre + "L給油します");
     if (litre <= 0) {
